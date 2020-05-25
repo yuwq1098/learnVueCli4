@@ -1,0 +1,81 @@
+{
+    // Place your snippets for vue here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "Print to console": {
+        "prefix": "vue",
+        "body": [
+            "<!--",
+            "  - @description: vue的vscode模板",
+            "  - @author: 则丸",
+            "  - @weChat: yuwq1098",
+            "  - @producer: 海康威视 & 易立德",
+            "  -->",
+            "",
+            "<template>",
+            "	<div class='templateVue'>",
+            "	</div>",
+            "</template>",
+            "",
+            "<script>",
+            "export default {",
+            "	name: 'templateVue',",
+            "	// 注册组件",
+            "	components: {",
+            "		// components...",
+            "	},",
+            "	// 数据",
+            "	data() {",
+            "		return {",
+            "			// date...",
+            "		}",
+            "	},",
+            "	// 接收父组件传入的参数",
+            "	props: {",
+            "		// props...",
+            "	},",
+            "	// vue实例被创建时",
+            "	created() {",
+            "		// created...",
+            "	},",
+            "	// vue实例被挂载至dom上时",
+            "	mounted() {",
+            "		// mounted...",
+            "	},",
+            "	// 销毁实例的钩子",
+            "	destroyed() {",
+            "		// destroyed...",
+            "	},",
+            "	// 属性值计算",
+            "	computed: {",
+            "		// computed...",
+            "	},",
+            "	// 数据监听",
+            "	watch: {",
+            "		// watch...",
+            "	},",
+            "	// 实例方法",
+            "	methods: {",
+            "		// methods...",
+            "	},",
+            "}",
+            "</script>",
+            "",
+            "<!-- 限定作用域'scoped' 不要误写成scope -->",
+            "<style lang='stylus' rel='stylesheet/stylus' scoped>",
+            "",
+            "</style>",
+        ],
+        "description": "Log output to console"
+    }
+}
