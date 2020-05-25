@@ -1,19 +1,19 @@
 <!--
-  - @description: Vue最外层容器组件
+  - @description: vue主页
   - @author: 则丸
   - @weChat: yuwq1098
   - @producer: 海康威视 & 易立德
   -->
 
 <template>
-    <div class='root'>
-        <router-view></router-view>
+    <div class='Home'>
+        我是vue主页
     </div>
 </template>
 
 <script>
 export default {
-    name: 'root',
+    name: 'Home',
     // 注册组件
     components: {
         // components...

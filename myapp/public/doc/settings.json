@@ -1,0 +1,56 @@
+{
+    "editor.tabSize": 4, // 代码缩进修改成2个空格
+    "editor.formatOnSave": true, // 每次保存的时候自动格式化
+    "eslint.autoFixOnSave": true, // 每次保存的时候将代码按eslint格式进行修复
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 让函数(名)和后面的括号之间加个空格
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.html": "js-beautify-html", // 这个按用户自身习惯选择
+    "vetur.format.defaultFormatterOptions": {
+        "prettier": {
+            "semi": false, // 格式化不加分号
+            "singleQuote": true // 格式化以单引号为主
+        },
+        "js-beautify-html": {
+            "wrap_attributes": "preserve-aligned", // vue组件中html代码格式化样式 [auto|force|force-aligned|force-expand-multiline|aligned-multiple|preserve|preserve-aligned]
+            "indent_size": 4,
+            "wrap_line_length": 120,
+            "max_preserve_newlines": 0
+        }
+    },
+    /*  prettier的配置 */
+    "prettier.semi": false, // 是否强制加分号
+    "prettier.singleQuote": true, // 使用单引号替代双引号
+    "prettier.printWidth": 150, // 超过最大值换行
+    "prettier.tabWidth": 4, // 缩进字节数
+    "prettier.useTabs": false, // 缩进不使用tab，使用空格
+    "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+    /* stylus的配置 */
+    "stylusSupremacy.insertColons": false, // 是否插入冒号
+    "stylusSupremacy.insertSemicolons": false, // 是否插入分号
+    "stylusSupremacy.insertBraces": false, // 是否插入大括号
+    "stylusSupremacy.insertNewLineAroundImports": false, // import之后是否换行
+    "stylusSupremacy.insertNewLineAroundBlocks": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }, // 让js文件的格式， 继承vscode里的 prettier
+    "eslint.codeAction.disableRuleComment": {
+
+
+    }
+}

@@ -37,7 +37,16 @@ import store from './store' // vuex
 // "eslint-plugin-vue": "^6.2.2",
 
 // 3. 结构优化
+// api -- 数据请求相关的文件
+// assets -- 资源文件（字体图标、css样式、图片、图标、第三方js插件库（vendor是供应商的意思） ）
+// components -- vue组件
+// pages -- vue页面， 一个页面可以由很多个组件组成
+// router -- vue路由
+// store -- vuex 数据状态管理
+// utils -- js工具
+
 // 4. vue.config.js 的配置文件， 用来做项目的webpack工程化配置
+
 // 5. 使用对应的（vue）UI 框架， 这里用Element UI
 // 6. http请求插件， axios
 // 7. css预编译器(stylus)的 工程化使用
