@@ -7,25 +7,9 @@
 // 引入 polyfill，解决部分es6 babel转译问题, 一般用来为旧浏览器提供它没有原生支持的较新的功能
 import '@babel/polyfill/dist/polyfill.min.js'
 import Vue from 'vue'
-// 引入 按需引入的element-ui组件库
-import ElementVue from '@/utils/element-vue'
-// 引入二次封装的axios
-import http from '@/utils/http.js'
 import App from './App.vue'
 import router from './router' // vue-router
 import store from './store' // vuex
-
-// 将项目中频繁使用的函数赋值给Vue原型属性，便于使用
-Vue.config.productionTip = false
-
-Vue.use(ElementVue)
-Vue.use(http)
-
-new Vue({
-    router,
-    store,
-    render: (h) => h(App),
-}).$mount('#app')
 
 // 已包含的
 // 1. vuex
@@ -63,20 +47,8 @@ new Vue({
 
 // 4. vue.config.js 的配置文件， 用来做项目的webpack工程化配置
 
-// 5. 使用对应的（vue）UI 框架， 这里用Element UI， 并按需加载 element-ui
-// ---- 安装element ui 的依赖
-// -------- yarn add element ui
-// ---- 使用按需element ui， https://element.eleme.cn/#/zh-CN/component/quickstart
-// -------- yarn add babel-plugin-component --dev
-// -------- 修改bebal.config.js
-// ---- 按需引入element ui， 在utils文件夹下 添加 element-vue.js（用vue插件的写法） 文件
-// ---- 在 main.js 中引入 element-vue.js 文件, 并使用它（vue插件）
-
+// 5. 使用对应的（vue）UI 框架， 这里用Element UI
 // 6. http请求插件， axios
-// ---- 安装element ui 的依赖
-// -------- yarn add axios
-// ---- 二次封装axios（用vue插件的写法）, 并在main.js 通过全局方法 Vue.use() 使用插件，就相当于调用install方法
-
 // 7. css预编译器(stylus)的 工程化使用
 // 8. Mock数据
 // 9. 集中化管理api请求文件
@@ -85,3 +57,12 @@ new Vue({
 // 11. 字体图标
 // 12. Event Bus 以及 Mixin
 // 13. 使项目支持jsx语法
+
+// 将项目中频繁使用的函数赋值给Vue原型属性，便于使用
+Vue.config.productionTip = false
+
+new Vue({
+    router,
+    store,
+    render: (h) => h(App),
+}).$mount('#app')

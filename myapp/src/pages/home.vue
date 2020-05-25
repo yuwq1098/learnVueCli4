@@ -6,10 +6,8 @@
   -->
 
 <template>
-    <div class="Home">
+    <div class='Home'>
         我是vue主页
-        <el-button>我是按钮</el-button>
-        <!-- <el-checkbox>我是按钮</el-checkbox> -->
     </div>
 </template>
 
@@ -33,17 +31,10 @@ export default {
     // vue实例被创建时
     created() {
         // created...
-        this.$message({
-            type: 'error',
-            message: '有意思',
-        })
     },
     // vue实例被挂载至dom上时
     mounted() {
         // mounted...
-        this.$http.get('mock/demo/card').then((response) => {
-            console.log(response.data)
-        })
     },
     // 销毁实例的钩子
     destroyed() {
@@ -60,9 +51,9 @@ export default {
     // 实例方法
     methods: {
         // methods...
-    },
+    }
 }
 </script>
 
 <!-- 限定作用域'scoped' 不要误写成scope -->
-<style lang="stylus" rel="stylesheet/stylus" scoped></style>
+<style lang='stylus' rel='stylesheet/stylus' scoped></style>
