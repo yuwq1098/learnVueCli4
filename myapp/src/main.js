@@ -139,3 +139,5 @@ new Vue({
 // 15. 安装lodash，以备实际项目开发使用
 
 // 16. 使项目支持jsx语法
+// ---- "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+// ---- "@vue/babel-preset-jsx": "^1.1.2",

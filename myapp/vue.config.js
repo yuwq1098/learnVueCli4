@@ -1,6 +1,7 @@
 // https://github.com/staven630/vue-cli4-config
 // https://cli.vuejs.org/zh/config/#vue-config-js
 // https://blog.csdn.net/ForeverBana/article/details/103539404
+//blog.csdn.net/u012971339/article/details/81876165
 
 const path = require('path')
 const resolve = (dir) => path.join(__dirname, dir)

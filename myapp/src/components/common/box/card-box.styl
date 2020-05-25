@@ -1,0 +1,100 @@
+/**
+ *  @description: 卡片盒子组件使用的 样式
+ *  @author: 则丸
+ *  @weChat: yuwq1098
+ *  @producer: 海康威视 & 易立德
+ * */
+.CardBox
+    width 260px
+    height 195px + 100px + 50px
+    margin 0 20px 20px 0
+    @extend .f__fl
+    .u-item
+        .u-picture-wrap
+            position relative
+            width 260px
+            height 195px
+            .u-label
+                display inline-block
+                position absolute
+                min-width 50px
+                padding 0 10px
+                font-size 12px
+                color #fff
+                background rgba(0, 0, 0, 0.5)
+                border-radius 4px 0
+                z-index 1
+                @extend .f__tac
+                _lineHeight(24px)
+                _spacingPlus(2px)
+            .u-pic
+                overflow hidden
+                width 260px
+                height 195px
+                border-radius 4px 4px 0 0
+                transition all 0.1s linear
+                cursor pointer
+                _imgWrap()
+                &:hover
+                    opacity 0.8
+        .u-content
+            padding 11px 16px 13px
+            height 75px
+            border-bottom 1px solid #eee
+            background #fff
+            .u-title
+                height 20px
+                line-height 20px
+                margin-bottom 5px
+                color #333
+                _ellipsis()
+            .u-subtit, .u-more-group
+                color #bbb
+                font-size 12px
+            .u-subtit
+                margin-bottom 12px
+                _lineHeight(18px)
+            .u-more-group
+                _lineHeight(20px)
+                @extend .f__clearfix
+                .u-group-item
+                    margin-right 12px
+                    @extend .f__fl
+                    i.iconfont
+                        width 18px
+                        margin-right 3px
+                        font-size 17px
+                        _lineHeight(20px)
+                        @extend .f__tac
+                        &::before
+                            vertical-align top
+                        &.u-link
+                            &:hover
+                                cursor pointer
+                                color #333
+                    em
+                        display inline-block
+                        line-height 20px
+                        vertical-align top
+        .u-footer
+            _lineHeight(24px)
+            padding 13px 16px
+            font-size 12px
+            background #fff
+            @extend .f__clearfix
+            .u-avatar
+                position relative
+                width 24px
+                height 24px
+                margin-right 8px
+                @extend .f__fl
+                _imgWrap(true)
+            .u-name
+                display block
+                width 70px
+                color #333
+                @extend .f__fl
+                _ellipsis()
+            .u-datetime
+                color #bbb
+                @extend .f__fr
