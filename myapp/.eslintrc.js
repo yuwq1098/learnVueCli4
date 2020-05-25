@@ -13,7 +13,6 @@ module.exports = {
         'class-methods-use-this': 0, // 类方法声明后， 必须使用它
         'generator-star-spacing': 0, // 生成器函数*的前后空格
         'space-before-function-paren': [0, 'always'], //函数定义时括号前面要不要有空格
-
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         quotes: [2, 'single'], // 单引号

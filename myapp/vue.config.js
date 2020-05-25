@@ -57,7 +57,7 @@ module.exports = {
             stylus: {
                 // http://lesscss.org/usage/#less-options-strict-units `Global Variables`
                 // `primary` is global variables fields name
-                // import: '~@/assets/css/base.styl', // 全局注入stylus的变量、 stylus的工具类、  stylus的混合函数方法
+                import: '~@/assets/css/base.styl', // 全局注入stylus的变量、 stylus的工具类、  stylus的混合函数方法
                 // globalVars: {
                 //   primary: '#fff'
                 // }

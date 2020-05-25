@@ -8,7 +8,7 @@
 <template>
     <div class="Home">
         我是vue主页
-        <el-button>我是按钮</el-button>
+        <el-button @click="() => bus.$emit('hello')">我是按钮{{ 18870836264 | telAnonymization }}</el-button>
         <!-- <el-checkbox>我是按钮</el-checkbox> -->
     </div>
 </template>
@@ -43,6 +43,14 @@ export default {
         // mounted...
         this.$http.get('mock/demo/card').then((response) => {
             console.log(response.data)
+        })
+        console.log(this.$util.formatDate(1561359600000))
+        const that = this
+        this.bus.$on('hello', () => {
+            this.$message({
+                type: 'success',
+                message: 'hello!',
+            })
         })
     },
     // 销毁实例的钩子

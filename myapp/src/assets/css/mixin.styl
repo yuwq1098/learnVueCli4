@@ -1,0 +1,54 @@
+/**
+ *  @description: 项目依赖的stylus样式混合方法
+ *  @author: 则丸
+ *  @weChat: yuwq1098
+ *  @producer: 海康威视 & 易立德
+ * */
+/* 完全居中布局 */
+_completeCenter(left = 0, right = 0, top = 0, bottom = 0, $position = absolute)
+    position $position
+    top top
+    right right
+    bottom bottom
+    left left
+    margin auto
+/* 单行/多行文字溢出省略 */
+_ellipsis($line = 1)
+    if ($line == 1)
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+    else if ($line > 1)
+        display -webkit-box !important
+        overflow hidden
+        text-overflow ellipsis
+        word-break break-all
+        -webkit-box-orient vertical
+        -webkit-line-clamp $line
+/* 启用硬件加速 */
+_willAccelerate()
+    /* 提醒浏览器提前准备硬件加速,兼容性不行 */
+    will-change transform
+    /* 触发硬件加速 CPU 转 GPU */
+    -webkit-transform translate3d(0, 0, 0)
+    -moz-transform translate3d(0, 0, 0)
+    -o-transform translate3d(0, 0, 0)
+    transform translate3d(0, 0, 0)
+/* 行高 */
+_lineHeight($height = 20px, $line = 1)
+    height $height * $line
+    line-height $height
+/* 特定图片处理 */
+_imgWrap($allRadius = false)
+    & > img
+        width 100%
+        height 100%
+        if ($allRadius != false)
+            border-radius 50%
+/* 字体间隔 */
+_spacing($pixel = 1px)
+    letter-spacing $pixel
+/* 字体间隔升级版 */
+_spacingPlus($pixel = 1px)
+    letter-spacing $pixel
+    text-indent $pixel
