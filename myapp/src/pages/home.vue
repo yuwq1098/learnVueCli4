@@ -41,7 +41,7 @@ export default {
     // vue实例被挂载至dom上时
     mounted() {
         // mounted...
-        this.$http.get('mock/demo/card').then((response) => {
+        this.$api.demo_card().then((response) => {
             console.log(response.data)
         })
         console.log(this.$util.formatDate(1561359600000))

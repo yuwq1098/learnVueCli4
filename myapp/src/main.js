@@ -12,6 +12,7 @@ import router from './router' // vue-router
 import store from './store' // vuex
 // 引入 按需引入的element-ui组件库
 import ElementVue from '@/utils/element-vue'
+import VueAxios from 'vue-axios'
 // 引入二次封装的axios
 import http from '@/utils/http'
 // 全局引入字段过滤器的安装文件
@@ -20,6 +21,10 @@ import textFilters from '@/utils/filters'
 import EventBus from '@/utils/bus'
 // 提供本网站所使用工具函数
 import * as utils from '@/utils/util'
+// 网站的api请求数据
+import api from '@/api/api'
+// JavaScript 实用工具库
+import _ from 'lodash'
 
 // 引入网站使用的主要样式文件
 import '@/assets/css/main.styl'
@@ -28,11 +33,13 @@ import '@/assets/css/main.styl'
 Vue.config.productionTip = false
 
 Vue.use(ElementVue)
-Vue.use(http)
+Vue.use(VueAxios, http)
 Vue.use(textFilters)
 Vue.use(EventBus)
 
 Vue.prototype.$util = utils
+Vue.prototype.$api = api
+Vue.prototype._ = _
 
 new Vue({
     router,
@@ -87,6 +94,7 @@ new Vue({
 // 6. http请求插件， axios
 // ---- 安装element ui 的依赖
 // -------- yarn add axios
+// -------- tyarn add  vue-axios
 // ---- 二次封装axios（用vue插件的写法）, 并在main.js 通过全局方法 Vue.use() 使用插件，就相当于调用install方法
 
 // 7. 字体图标
@@ -114,5 +122,20 @@ new Vue({
 // ---- 创建 utils.js 并在 main.js 中使用
 
 // 13. Mock数据
-// 9. 集中化管理api请求文件
-// 14. 使项目支持jsx语法
+// ---- 安装 koa-generator脚手架
+// -------- tyarn add koa-generator -g
+// ---- 一键生成koa2项目
+// -------- koa2 server
+// -------- cd server && yarn install
+// ---- 增加koa 的 路由文件 demo.js， 并安装mock
+// -------- yarn add mockjs
+// ---- 在app.js中引入demo.js
+
+// 14. 集中化管理api请求文件
+// ---- 在src/api 文件夹下 增加 api.js， 并丰富内容
+// ---- 在 main.js引入api.js， 并将接口请求的全部方法放在 vue原型链上
+// ---- 改成 axios + vue-axios 的 方式引入 二次封装的 axios
+
+// 15. 安装lodash，以备实际项目开发使用
+
+// 16. 使项目支持jsx语法
