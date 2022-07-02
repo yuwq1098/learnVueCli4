@@ -5,6 +5,8 @@ import VueRouter from 'vue-router'
 const Home = () => import('pages/home.vue')
 // 示例1代码
 const Example01 = () => import('pages/example/example01')
+// 示例2代码
+const Example02 = () => import('pages/example/example02')
 
 Vue.use(VueRouter)
 
@@ -22,6 +24,11 @@ const routes = [
         path: '/demo1', // 示例1代码
         name: 'Example01',
         component: Example01,
+    },
+    {
+        path: '/demo2', // 示例2代码
+        name: 'Example02',
+        component: Example02,
     },
 ]
 
